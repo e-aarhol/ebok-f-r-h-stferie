@@ -1,0 +1,84 @@
+body {
+    background-color: rgb(109, 109, 109);
+    font-size: 2rem;
+    color: white;
+  }
+  
+
+  header {
+    display: flex;
+    width: 100%;
+    height: 10vh;
+    margin: auto;
+    margin-top: -15px;
+    align-items: center;
+    background-color: rgba(61, 61, 61, 0.877);
+}
+ 
+.logo-container,
+.nav-links,
+.cart {
+    display: flex;
+}
+ 
+.logo-container {
+    flex: 1;
+}
+.logo {
+    font-weight: 1200;
+    margin: 5px;
+    color: rgb(255, 255, 255);
+    font-size: 22px;
+}
+nav {
+    flex: 0.5;
+}
+.nav-links {
+    justify-content: space-around;
+    list-style: none;
+}
+.nav-link {
+    color: #ffffff;
+    font-size: 18px;
+    text-decoration: none;
+    font-weight: 1000;
+}
+
+
+
+.item1 { grid-area:Fag1;}
+.item2 { grid-area:Fag2;}
+.item3 { grid-area:Fag3;}   
+.item4 { grid-area:strek1;}    
+.item5 { grid-area:Fag4;}      
+.item6 { grid-area:Other;}   
+.item7 { grid-area:strek2;}  
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    'Fag1 Fag1 Fag2 Fag2 Fag3 Fag3'
+    'strek1 Fag4 Fag4 Other Other strek2';
+    
+  grid-gap: 20px;
+  padding: 5px;
+}
+
+.grid-container > div {
+  background-color: rgba(71, 71, 71, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+  opacity: 0.8;
+  margin-top: 30px;
+}
+
+.grid-container > div.item7{
+    background-color: inherit;
+}
+
+.grid-container > div.item4{
+  background-color: inherit;
+}
